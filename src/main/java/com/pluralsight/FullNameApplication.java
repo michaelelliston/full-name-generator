@@ -23,6 +23,8 @@ public class FullNameApplication {
         System.out.println("Please enter your suffix, if applicable: ");
         suffix = myScanner.nextLine();
 
-        System.out.printf("Hello, %s %s %s %s", firstName, middleName, lastName, suffix);
+        String output = firstName + middleName + lastName + suffix;
+        System.out.println(output);
+
     }
 }
