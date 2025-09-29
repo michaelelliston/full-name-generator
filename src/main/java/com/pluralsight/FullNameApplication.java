@@ -23,8 +23,18 @@ public class FullNameApplication {
         System.out.println("Please enter your suffix, if applicable: ");
         suffix = myScanner.nextLine();
 
-        String output = firstName + middleName + lastName + suffix;
-        System.out.println(output);
+        String name = firstName.trim();
+        if (!middleName.isBlank()) {
+            name = name + " " + middleName.trim() + '.';
+        }
+
+        name = name + " " + lastName.trim();
+
+        if (!suffix.isBlank()) {
+            name = name + ", " + suffix.trim();
+        }
+        System.out.println(name);
+
 
     }
 }
